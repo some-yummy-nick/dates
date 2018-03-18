@@ -1,0 +1,21 @@
+.date {
+	padding-top: 20px;
+	padding-left: 20px;
+	font-size: 18px;
+}
+
+.date__item + .date__item {
+	margin-top: 20px;
+}
+
+.date__prop {
+	cursor: pointer;
+}
+
+.date__day {
+	display: none;
+}
+
+.date__day.active {
+	display: block;
+}
