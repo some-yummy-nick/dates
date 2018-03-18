@@ -1,11 +1,11 @@
 .date {
 	padding-top: 20px;
 	padding-left: 20px;
-	font-size: 5em;
+	font-size: 5vh;
 }
 
 .date__item + .date__item {
-	margin-top: 20px;
+	margin-top: 2vh;
 }
 
 .date__prop {
