@@ -22,8 +22,8 @@ function randomDate(date1, date2) {
 	var dateFormat = date3.toLocaleString("ru", options);
 
 	var dateObject = {
-		dateFormat:dateFormat,
-		day:day
+		dateFormat: dateFormat,
+		day: day
 	};
 
 	return dateObject;
@@ -47,14 +47,17 @@ function dayOutput(dateObject) {
 	dateItem.appendChild(propHtml);
 	dateItem.appendChild(dayHtml);
 	dateHtml.appendChild(dateItem);
-
 	propHtml.addEventListener("click", function () {
-		dayHtml.classList.toggle("active");
+		var dayOther = document.querySelectorAll(".date__day");
+		for (let i = 0; i < dayOther.length; i++) {
+			dayOther[i].classList.remove("active");
+		}
+		this.nextElementSibling.classList.add("active");
 	})
 }
 
 dayOutput(randomDate('01/01/1900', '12/31/2020'));
 
-for(let i=0;i<10;i++){
+for (let i = 0; i < 10; i++) {
 	dayOutput(randomDate('01/01/1900', '12/31/2020'));
 }
